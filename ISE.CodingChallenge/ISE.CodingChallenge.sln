@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISE.CodingChallenge.Tests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISE.CodingChallenge.API", "ISE.CodingChallenge.API\ISE.CodingChallenge.API.csproj", "{0422054D-35BF-4E1A-9172-96EFF4C15C58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISE.CodingChallenge.API.Tests", "ISE.CodingChallenge.API.Tests\ISE.CodingChallenge.API.Tests.csproj", "{0959BBB4-974A-4CDE-8882-BE375D3EBA37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ISE.CodingChallenge.API.Tests", "ISE.CodingChallenge.API.Tests\ISE.CodingChallenge.API.Tests.csproj", "{0959BBB4-974A-4CDE-8882-BE375D3EBA37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4F4EE41-DA8E-43B7-AB73-C7E70B5A9DDE}"
+	ProjectSection(SolutionItems) = preProject
+		data\lessons.xml = data\lessons.xml
+		data\users.csv = data\users.csv
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

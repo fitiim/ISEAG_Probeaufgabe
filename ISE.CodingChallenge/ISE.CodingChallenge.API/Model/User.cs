@@ -1,4 +1,6 @@
-﻿namespace ISE.CodingChallenge.API.Model;
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace ISE.CodingChallenge.API.Model;
 
 public class User
 {

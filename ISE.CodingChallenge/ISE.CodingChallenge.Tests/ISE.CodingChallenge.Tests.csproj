@@ -21,4 +21,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ISE.CodingChallenge.Service\ISE.CodingChallenge.Service.csproj" />
+  </ItemGroup>
+
 </Project>
