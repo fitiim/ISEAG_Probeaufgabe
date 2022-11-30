@@ -19,5 +19,9 @@ namespace ISE.CodingChallenge.API
         Task<string> GetGroupMembers(string GroupId);
         Task AddGroupMember(string GroupId, string UserId);
         Task RemoveGroupMember(string GroupId, string UserId);
+
+        Task<string> GetGroupOwners(string GroupId);
+        Task AddGroupOwner(string GroupId, string UserId);
+        Task RemoveGroupOwner(string GroupId, string UserId);
     }
 }
