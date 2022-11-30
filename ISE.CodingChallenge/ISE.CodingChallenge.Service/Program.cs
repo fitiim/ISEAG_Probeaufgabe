@@ -11,7 +11,7 @@ using System.Data;
 using System.Xml;
 using System.Security.Cryptography.X509Certificates;
 using ISE.CodingChallenge.Service;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Xml.Linq;
 
 internal class Program
 {
@@ -24,7 +24,7 @@ internal class Program
         List<MappedCsv> users = new List<MappedCsv>();
         foreach (string line in csv)
         {
-            var delimitedLine = line.Split(','); //set ur separator, in this case tab
+            var delimitedLine = line.Split(','); 
 
             users.Add(new MappedCsv(delimitedLine[1], delimitedLine[2]));
 
@@ -33,19 +33,19 @@ internal class Program
                 uService.AddUser(delimitedLine[1] + delimitedLine[2], delimitedLine[1] + "." + delimitedLine[2] + "@hogwarts.com");
             }
         }
-    
 
-        
+        XmlDocument xmlDoc = new XmlDocument();
+        xmlDoc.LoadXml("C:\\Users\\code.interview\\source\\repos\\ISEAG_Probeaufgabe\\ISE.CodingChallenge\\data\\lessons.xml");
+
+        XmlNodeList lessons = xmlDoc.SelectNodes("/dataset/record/lesson/title");
+        foreach (XmlNode xn in lessons)
+        {
+            Console.WriteLine(xn.InnerText);
+        }
 
 
 
 
-
-        var lessons = new XmlDocument();
-        lessons.Load("C:\\Users\\code.interview\\source\\repos\\ISEAG_Probeaufgabe\\ISE.CodingChallenge\\data\\lessons.xml");
-
-
- 
 
 
 
