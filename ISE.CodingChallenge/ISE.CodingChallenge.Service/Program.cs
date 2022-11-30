@@ -15,7 +15,7 @@ using System.Xml.Linq;
 
 internal class Program
 {
-    private static void Main(string[] args)
+    private static async Task Main(string[] args)
     {
         var gService = new GroupService();
         var uService = new UserService();
@@ -30,25 +30,24 @@ internal class Program
 
             foreach (var item in users)
             {
-                uService.AddUser(delimitedLine[1] + delimitedLine[2], delimitedLine[1] + "." + delimitedLine[2] + "@hogwarts.com");
+                await uService.AddUser(delimitedLine[1] + delimitedLine[2], delimitedLine[1] + "." + delimitedLine[2] + "@hogwarts.com");
             }
         }
 
         XmlDocument xmlDoc = new XmlDocument();
         xmlDoc.LoadXml("C:\\Users\\code.interview\\source\\repos\\ISEAG_Probeaufgabe\\ISE.CodingChallenge\\data\\lessons.xml");
-
+        XmlElement root = xmlDoc.DocumentElement;
+        var title = new List<string>();
         XmlNodeList lessons = xmlDoc.SelectNodes("/dataset/record/lesson/title");
-        foreach (XmlNode xn in lessons)
+
+        foreach (XmlNode node in lessons)
         {
-            Console.WriteLine(xn.InnerText);
+            title.Add(root.GetAttribute("title").ToString());
+            foreach (var item in title)
+            {
+                gService.AddGroup()
+            }
         }
-
-
-
-
-
-
-
 
     }
 }
